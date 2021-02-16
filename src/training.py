@@ -8,6 +8,7 @@ import pickle
 from sklearn.model_selection import train_test_split
 from sklearn import datasets, linear_model
 
+# fitting a linear regression model
 def train_regression(vectorizer, text, scores, tfidf_path, model_path):
     X = vectorizer.fit_transform(text)
     scipy.sparse.save_npz(tfidf_path, X)
